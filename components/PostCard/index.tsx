@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link  from 'next/link';
 
 interface PostCardProps {
   title: string;
@@ -34,7 +34,7 @@ export const PostCard = ({
       ></div>
 
       <Link
-        to={`/posts/${slug}`}
+        href={`/posts/${slug}`}
         className={`
           block h-full cursor-pointer
           relative z-10
