@@ -1,26 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Space%20Mono:700|Space%20Mono:400');
 @import "tailwindcss";
 
+@theme {
+  --color-text: #ffd7f1;
+  --color-background: #121212;
+  --color-primary: #fe77d0;
+  --color-secondary: #974613;
+  --color-accent: #fd9628;
+
+  --font-mono: "Space Mono", monospace;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+::selection {
+  background-color: #fe77d0; 
+  color: #000000;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Space Mono';
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.card-retro {
+  border: 2px solid black;    
+  box-shadow: 5px 5px 0px 0px #000000; 
+}
+
+.page {
+  min-height: 100vh; 
+  width: 100%;
+  margin: auto;
+  margin-top: 5rem; 
+  box-sizing: border-box; 
+}
+
+.content {
+  text-align: left;
+  width: 100%;           
+  max-width: 800px;      
+  margin: auto;  
+  overflow-wrap: break-word; 
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.content h1{
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+
+.content h2{
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.content hr{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content ul {
+  list-style-type: disc; 
+  padding-left: 2rem;    
+  margin-bottom: 1.5rem; 
+}
+
+.content ol {
+  list-style-type: decimal; 
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.content li {
+  margin-bottom: 0.5rem; 
+  line-height: 1.6;      
+}
+
+.content ul ul {
+  list-style-type: circle;
+  margin-bottom: 0; 
+}
+
+.content ul ul ul {
+  list-style-type: square;
+}
+.content table {
+  width: 100%;
+  border-collapse: separate; 
+  border-spacing: 0;
+  margin: 1.5rem 0;
+  background-color: #1E1E1E;
+  border: 1px solid #333;   
+  border-radius: 8px;        
+  overflow: hidden;          
+  font-size: 0.95rem;
+  color: #d4d4d4;           
+}
+
+.content thead {
+  background-color: #2d2d2d; 
+  color: #ffffff;
+}
+
+.content th {
+  font-weight: 700;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 2px solid #444;
+}
+
+.content td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #333;
+}
+
+.content tr:last-child td {
+  border-bottom: none;
+}
+
+.content tbody tr:nth-child(even) {
+  background-color: #262626;
+}
+
+.content tbody tr:hover {
+  background-color: #383838;
+  transition: background-color 0.2s ease;
+}
+
+.content td code {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.85em;
+  color: #ff79c6; 
+}
+
+@media (max-width: 1000px) {
+  .page {
+    overflow-x: hidden;
+  }
+
+  .content {
+    padding: 0 1.5rem;
+    
+    width: 100%;
+  }
 }
