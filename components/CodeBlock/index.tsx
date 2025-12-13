@@ -7,13 +7,6 @@ export const CodeBlock = ({ className, children, ...props }: any) => {
   const match = /language-(\w+)/.exec(className || '');
   const language = match ? match[1] : null;
 
-  const handleCopy = async () => {
-    const textToCopy = String(children).replace(/\n$/, '');
-    await navigator.clipboard.writeText(textToCopy);
-    setIsCopied(true);
-    setTimeout(() => setIsCopied(false), 2000);
-  };
-
   if (!match) {
     return (
       <code
