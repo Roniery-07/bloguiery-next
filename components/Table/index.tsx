@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useRef, useState, MouseEvent } from 'react';
 //eslint-disable-next-line
 interface TableProps extends React.TableHTMLAttributes<HTMLTableElement> {}
