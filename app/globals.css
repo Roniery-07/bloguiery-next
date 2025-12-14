@@ -18,12 +18,13 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  
+  --pink: #ff79c6; 
 }
 
 ::selection {
@@ -68,6 +69,10 @@ body {
 .content h2{
   font-size: 1.5rem;
   margin-left: 0.5rem;
+}
+
+.content h3 {
+  font-size: 1.25rem;
 }
 
 .content hr{
@@ -150,6 +155,17 @@ body {
   font-family: monospace;
   font-size: 0.85em;
   color: #ff79c6; 
+}
+
+.content blockquote {
+  margin: auto;
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-family: monospace;
+  padding: 0.5rem;
+  border-left-width: 0.5rem;
+  border-left-color: var(--pink);  ;
 }
 
 @media (max-width: 1000px) {

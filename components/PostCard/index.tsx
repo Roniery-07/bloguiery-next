@@ -34,7 +34,7 @@ export const PostCard = ({
       ></div>
 
       <Link
-        href={`/posts/${slug}`}
+        href={`post/${slug}`}
         className={`
           block h-full cursor-pointer
           relative z-10

@@ -43,18 +43,13 @@ export const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-8">
             <NavLink to="/about">about</NavLink>
-            <NavLink to="/posts">posts</NavLink>
-            <NavLink to="/contact">contact</NavLink>
-            <Button>
-              <Moon className="size-4" />
-            </Button>
+            <NavLink to="https://github.com/Roniery-07" onClick={toggleMenu}>
+              contact
+            </NavLink>
+
           </div>
 
           <div className="flex items-center gap-4 md:hidden">
-            <Button>
-              <Moon className="size-4" />
-            </Button>
-
             <button
               onClick={toggleMenu}
               className="text-text! hover:text-accent focus:outline-none transition-transform duration-300"
@@ -81,10 +76,7 @@ export const Navbar = () => {
           <NavLink to="/about" onClick={toggleMenu}>
             about
           </NavLink>
-          <NavLink to="/posts" onClick={toggleMenu}>
-            posts
-          </NavLink>
-          <NavLink to="/contact" onClick={toggleMenu}>
+          <NavLink to="https://github.com/Roniery-07" onClick={toggleMenu}>
             contact
           </NavLink>
         </div>
