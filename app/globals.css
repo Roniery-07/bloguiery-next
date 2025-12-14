@@ -105,17 +105,36 @@ body {
 .content ul ul ul {
   list-style-type: square;
 }
+
+.table-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  cursor: grab;
+  margin: 1.5rem 0; 
+  
+  scrollbar-width: thin;
+  border: 1px solid #333;   
+  border-radius: 8px;
+}
+
+.table-wrapper:active,
+.table-wrapper.grabbing {
+  cursor: grabbing;
+}
+
 .content table {
   width: 100%;
   border-collapse: separate; 
   border-spacing: 0;
-  margin: 1.5rem 0;
   background-color: #1E1E1E;
-  border: 1px solid #333;   
-  border-radius: 8px;        
   overflow: hidden;          
   font-size: 0.95rem;
-  color: #d4d4d4;           
+  color: #d4d4d4;     
+  margin: 0; 
+  width: 100%;
+  border: none;
+  border-radius: 0;      
 }
 
 .content thead {
@@ -124,6 +143,7 @@ body {
 }
 
 .content th {
+  white-space: nowrap; 
   font-weight: 700;
   text-align: left;
   padding: 12px 16px;
@@ -132,6 +152,7 @@ body {
 
 .content td {
   padding: 12px 16px;
+  white-space: nowrap; 
   border-bottom: 1px solid #333;
 }
 

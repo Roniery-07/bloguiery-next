@@ -2,6 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import Markdown from "react-markdown";
 import { CodeBlock } from "@/components/CodeBlock"; 
+import {Table} from "@/components/Table"
 import remarkGfm from "remark-gfm";
 
 interface PostMetadata {
@@ -72,6 +73,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <Markdown
           components={{
             code: CodeBlock,
+            table: Table
           }}
           remarkPlugins={[remarkGfm]}
         >
