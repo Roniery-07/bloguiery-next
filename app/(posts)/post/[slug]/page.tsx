@@ -69,7 +69,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </div>
       )}
 
-      <div className="content prose max-w-none dark:prose-invert">
+      <div className="content prose max-w-none prose-invert">
         <Markdown
           components={{
             code: CodeBlock,
