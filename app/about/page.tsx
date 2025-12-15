@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { FaBriefcase } from 'react-icons/fa6';
 
 export default function About(){
@@ -5,14 +6,16 @@ export default function About(){
     <div className="page">
       <div className="w-full p-4 md:max-w-6xl grid grid-cols-1 md:grid-cols-5 gap-10 items-start m-auto">
         <div className="md:col-span-3 flex flex-col">
-          <h1 className="text-3xl font-bold mb-5 leading-none">Trainer Info</h1>
+          <h1 className="text-3xl font-bold mb-5 leading-none">Engineer Info</h1>
 
           <section className="card-retro flex bg-secondary p-0 overflow-hidden">
             <div className="w-52 bg-background shrink-0 border-r-2 border-black">
-              <img
-                src="https://placehold.co/200x240"
+              <Image
+                src="/profile-photo1.jpeg"
                 className="w-full h-full object-cover"
                 alt="profile"
+                width={200}
+                height={240}
               />
             </div>
 
@@ -60,13 +63,13 @@ export default function About(){
               </div>
               <div>
                 <h1 className="text-black text-sm font-bold">
-                  Intern JavaScript Developer
+                  Intern Full-Stack Software Engineer React.js/Node.js
                 </h1>
                 <p className="text-xs font-bold mt-1 text-black">
-                  Firecracker Inc.
+                  Gaia, solutions on demand.
                 </p>
                 <p className="text-xs text-gray-500 italic">
-                  May 2022 - present
+                  Oct 2025 - present
                 </p>
               </div>
             </div>
@@ -77,13 +80,13 @@ export default function About(){
               </div>
               <div>
                 <h1 className="text-black text-sm font-bold">
-                  Junior JavaScript Developer
+                  Junior Full-Stack .NET C#/Typescript Developer
                 </h1>
                 <p className="text-xs font-bold mt-1 text-black">
-                  Pro Property Maint.
+                  Irmãos Farid.
                 </p>
                 <p className="text-xs text-gray-500 italic">
-                  May 2013 - Nov 2022
+                  May 2025 - Oct 2025
                 </p>
               </div>
             </div>
@@ -93,13 +96,13 @@ export default function About(){
               </div>
               <div>
                 <h1 className="text-black text-sm font-bold">
-                  Junior JavaScript Developer
+                  Full-Stack Intern .NET C#/Typescript
                 </h1>
                 <p className="text-xs font-bold mt-1 text-black">
-                  Pro Property Maint.
+                  Irmãos Farid.
                 </p>
                 <p className="text-xs text-gray-500 italic">
-                  May 2013 - Nov 2022
+                  Nov 2024 - May 2025
                 </p>
               </div>
             </div>
