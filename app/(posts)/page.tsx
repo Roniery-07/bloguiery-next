@@ -23,6 +23,7 @@ export default async function Page() {
             createdAt={p.date}
             body={p.description}
             slug={p.slug}
+            tags={p.tags}
           />
         ))}
       </div>

@@ -5,6 +5,7 @@ interface PostCardProps {
   body: string;
   createdAt: Date | string;
   slug?: string;
+  tags?: string[]
 }
 
 export const PostCard = ({
@@ -12,6 +13,7 @@ export const PostCard = ({
   body,
   createdAt,
   slug = '#',
+  tags
 }: PostCardProps) => {
   const dateObj = new Date(createdAt);
 
@@ -47,11 +49,19 @@ export const PostCard = ({
           active:translate-x-[6px] active:translate-y-[6px]
         `}
       >
-        <div className="flex flex-col gap-2">
-          <div className="flex justify-between items-start border-b border-black/10 pb-2 mb-2">
-            <span className="font-mono text-xs font-bold uppercase tracking-widest text-secondary">
+        <div className="flex flex-col gap-2 flex-w">
+          <div className="flex justify-between items-center border-b border-black/10 pb-2 mb-2 ">
+            <span className="font-mono text-xs font-bold uppercase tracking-widest text-secondary mr-5">
               {formattedDate}
+              
             </span>
+            <div className='flex gap-2 flex-wrap'>
+              {tags?.map(t => (
+                  <div key={t} className='p-1 card-retro font-mono text-xs bg-background rounded-md'>
+                    <span className='  text-text pa'>{t}</span>
+                  </div>
+                ))}
+            </div>
           </div>
 
           <h1 className="text-xl font-bold font-mono leading-tight">{title}</h1>
