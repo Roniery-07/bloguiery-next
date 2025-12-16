@@ -15,7 +15,7 @@ export const Footer = () => {
   `;
 
   return (
-    <footer className="w-full bg-secondary border-t-2 border-black p-8 text-black">
+    <footer className="w-full bg-secondary border-t-2 border-black p-8 text-black mt-25">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-around gap-10">
         <form
           action=""
