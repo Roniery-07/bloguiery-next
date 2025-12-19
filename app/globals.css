@@ -63,15 +63,18 @@ body {
 .content h1{
   font-size: 2rem;
   margin-left: 0.5rem;
+  margin-top: 0.5rem
 }
 
 .content h2{
   font-size: 1.5rem;
   margin-left: 0.5rem;
+  margin-top: 0.5rem
 }
 
 .content h3 {
   font-size: 1.25rem;
+  margin-top: 0.5rem
 }
 
 .content hr{
@@ -185,7 +188,8 @@ body {
   font-family: monospace;
   padding: 0.5rem;
   border-left-width: 0.5rem;
-  border-left-color: var(--pink);  ;
+  border-left-color: var(--pink);
+  margin-bottom: 0.5rem
 }
 
 @media (max-width: 1000px) {
