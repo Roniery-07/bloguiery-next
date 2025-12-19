@@ -9,6 +9,7 @@ interface PostMetadata {
   title: string;
   date: string;
   tags: string[];
+  description: string;
   categoria: string[]
 }
 
@@ -64,8 +65,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <p className="text-gray-400 font-mono text-sm">
             {dateFormatted}
           </p>
-          
-          <hr className="border-gray-700 mt-8" />
+          <p className=" font-mono text-md mt-2">
+            {metadata.description}
+          </p>
+          <hr className="border-gray-700 mt-4" />
         </div>
       )}
 
